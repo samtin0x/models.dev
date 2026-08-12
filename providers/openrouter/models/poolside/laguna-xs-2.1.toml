@@ -5,3 +5,7 @@ reasoning_options = []
 input = 0.06
 output = 0.12
 cache_read = 0.03
+discount = 0.4
+input_list = 0.1
+output_list = 0.2
+cache_read_list = 0.05

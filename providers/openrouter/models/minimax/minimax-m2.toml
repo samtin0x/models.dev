@@ -8,6 +8,9 @@ field = "reasoning_details"
 [cost]
 input = 0.255
 output = 1.02
+discount = 0.15
+input_list = 0.3
+output_list = 1.2
 
 [limit]
 context = 204_800

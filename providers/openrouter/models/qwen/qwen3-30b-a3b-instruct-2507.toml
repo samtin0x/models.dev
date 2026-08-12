@@ -14,6 +14,9 @@ open_weights = true
 [cost]
 input = 0.04815
 output = 0.19305
+discount = 0.55
+input_list = 0.107
+output_list = 0.429
 
 [limit]
 context = 262_144

@@ -8,6 +8,10 @@ field = "reasoning_details"
 input = 0.5795
 output = 2.44
 cache_read = 0.0976
+discount = 0.39
+input_list = 0.95
+output_list = 4
+cache_read_list = 0.16
 
 [modalities]
 input = ["text", "image"]
