@@ -1,0 +1,88 @@
+name: Collect OpenRouter Prices
+
+# Fork-only price collector. Runs the OpenRouter sync hourly and commits any
+# pricing movement straight to dev, so the git history accumulates a record of
+# what each model cost and which promotions were running when.
+#
+# Deliberately not the upstream sync-models workflow: that one fans out over
+# every provider, needs a GitHub App to sign commits, and routes changes through
+# auto-merged PRs. None of that is available on a fork, and none of it is needed
+# to build a price history.
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: collect-openrouter-prices
+
+jobs:
+  collect:
+    # Never run on upstream or on forks-of-this-fork.
+    if: github.repository == 'samtin0x/models.dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          ref: dev
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@f4d14e03ff726c06358e5557344e1da148b56cf7
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      # --no-issues because the runner opens missing-model GitHub issues by
+      # default whenever GITHUB_ACTIONS is set, which this fork does not want.
+      - name: Sync OpenRouter catalog
+        run: bun models:sync openrouter --no-issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+
+      - name: Validate catalog
+        run: bun validate
+
+      - name: Commit price changes
+        run: |
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain -- models providers)" ]; then
+            echo "No pricing changes this run." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add models providers
+          git commit -m "chore(prices): OpenRouter $(date -u +'%Y-%m-%d %H:%MZ')"
+
+          # Another run (or a manual push) may have landed first.
+          git pull --rebase origin dev
+          git push origin HEAD:dev
+
+          {
+            echo "## Pricing changes"
+            echo
+            echo '```'
+            git show --stat --format= HEAD
+            echo '```'
+            echo
+            echo "### Models currently discounted"
+            echo
+            echo '| Model | Discount | Billed in/M | Standard in/M |'
+            echo '|---|---|---|---|'
+            for f in $(grep -rl '^discount = ' providers/openrouter/models | sort); do
+              id="${f#providers/openrouter/models/}"; id="${id%.toml}"
+              d=$(sed -n 's/^discount = //p' "$f" | head -1)
+              i=$(sed -n 's/^input = //p' "$f" | head -1)
+              l=$(sed -n 's/^input_list = //p' "$f" | head -1)
+              echo "| \`$id\` | $d | $i | ${l:-—} |"
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
