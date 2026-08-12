@@ -17,6 +17,10 @@ type = "budget_tokens"
 input = 0.3
 output = 1.2
 cache_read = 0.006
+discount = 0.6
+input_list = 0.75
+output_list = 3
+cache_read_list = 0.015
 
 [limit]
 context = 1_048_756

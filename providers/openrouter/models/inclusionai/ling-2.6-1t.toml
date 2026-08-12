@@ -14,6 +14,10 @@ open_weights = false
 input = 0.075
 output = 0.625
 cache_read = 0.015
+discount = 0.75
+input_list = 0.3
+output_list = 2.5
+cache_read_list = 0.06
 
 [limit]
 context = 262_144

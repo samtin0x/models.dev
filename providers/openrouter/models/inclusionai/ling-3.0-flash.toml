@@ -15,6 +15,10 @@ reasoning_options = []
 input = 0.021
 output = 0.063
 cache_read = 0.0042
+discount = 0.65
+input_list = 0.06
+output_list = 0.18
+cache_read_list = 0.012
 
 [limit]
 context = 262_144
