@@ -19,12 +19,12 @@ input = 0.375
 output = 1.875
 reasoning = 1.875
 cache_read = 0.0375
-cache_write = 0.041667
+cache_write = 0.020833
 discount = 0.5
 input_list = 0.75
 output_list = 3.75
 cache_read_list = 0.075
-cache_write_list = 0.083334
+cache_write_list = 0.041666
 
 [limit]
 context = 1_048_576
