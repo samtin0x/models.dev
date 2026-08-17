@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency: collect-openrouter-prices
 
@@ -86,3 +87,45 @@ jobs:
               echo "| \`$id\` | $d | $i | ${l:-—} |"
             done
           } >> "$GITHUB_STEP_SUMMARY"
+
+      # A silent collector is worse than none: the utc_start/utc_end schema drift
+      # failed 13 consecutive runs over ~14h before anyone noticed, and promos that
+      # start and end inside an outage are lost for good.
+      - name: Open or update failure issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          gh label create collector-failure --color B60205 \
+            --description "Price collector run failed" >/dev/null 2>&1 || true
+
+          existing="$(gh issue list --state open --label collector-failure --json number --jq '.[0].number // empty')"
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "Still failing — $RUN_URL"
+            exit 0
+          fi
+
+          gh issue create \
+            --title "Price collector is failing" \
+            --label collector-failure \
+            --body "$(printf '%s\n' \
+              "The OpenRouter price collector failed. Prices are not being recorded, and any promotion that starts and ends before this is fixed will be missing from the history permanently." \
+              "" \
+              "First failing run: $RUN_URL" \
+              "" \
+              "Most likely cause is OpenRouter changing a payload shape the Zod schemas reject — check the \`Sync OpenRouter catalog\` step for a ZodError and the offending field path." \
+              "" \
+              "This issue closes automatically on the next successful run.")"
+
+      - name: Close failure issue on recovery
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          for n in $(gh issue list --state open --label collector-failure --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Recovered — $RUN_URL"
+          done
