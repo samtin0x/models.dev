@@ -1970,6 +1970,33 @@ test("xAI sync clears cost tiers when API reports no long-context band", () => {
   expect(model.cost?.tiers).toBeUndefined();
 });
 
+test("OpenRouter sync ignores time-of-day pricing overrides", () => {
+  // OpenRouter serves DeepSeek's off-peak schedule as overrides keyed by
+  // utc_start/utc_end with no min_prompt_tokens. Parsing must not reject them,
+  // and they must not become context tiers.
+  const raw = {
+    data: [{
+      ...openRouterModel({ id: "deepseek/deepseek-v4-pro" }),
+      pricing: {
+        prompt: "0.00000132",
+        completion: "0.00000396",
+        overrides: [
+          { utc_start: 1000, utc_end: 100, prompt: "0.00000066", completion: "0.00000198" },
+          { utc_start: 100, utc_end: 400, prompt: "0.00000132", completion: "0.00000396" },
+          { min_prompt_tokens: 200_000, prompt: "0.00000264", completion: "0.00000792" },
+        ],
+      },
+    }],
+  };
+
+  const parsed = openrouter.parseModels(raw);
+  const model = buildOpenRouterModel(parsed[0]!, undefined);
+
+  expect(model.cost?.tiers).toEqual([
+    { tier: { type: "context", size: 200_000 }, input: 2.64, output: 7.92, cache_read: undefined, cache_write: undefined },
+  ]);
+});
+
 test("OpenRouter sync maps pricing.overrides into cost tiers", () => {
   const model = buildOpenRouterModel(openRouterModel({
     id: "x-ai/grok-4.5",
