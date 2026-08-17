@@ -5,9 +5,13 @@ reasoning_options = []
 field = "reasoning_details"
 
 [cost]
-input = 0.95
-output = 4
-cache_read = 0.16
+input = 0.5605
+output = 2.36
+cache_read = 0.0944
+discount = 0.41
+input_list = 0.95
+output_list = 4
+cache_read_list = 0.16
 
 [modalities]
 input = ["text", "image"]
