@@ -23,7 +23,7 @@ output = 3.2
 cache_read = 0.05
 
 [limit]
-context = 262_144
+context = 1_000_000
 output = 131_072
 
 [modalities]
