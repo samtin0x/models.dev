@@ -7,8 +7,12 @@ field = "reasoning_details"
 
 [cost]
 input = 0.27
-output = 0.95
-cache_read = 0.03
+output = 1.08
+cache_read = 0.027
+discount = 0.1
+input_list = 0.3
+output_list = 1.2
+cache_read_list = 0.03
 
 [limit]
-output = 32_768
+output = 128_000
