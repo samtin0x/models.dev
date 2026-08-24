@@ -11,13 +11,13 @@ type = "effort"
 values = ["high", "xhigh"]
 
 [cost]
-input = 0.522174
-output = 1.044348
-cache_read = 0.043515
-discount = 0.6999
+input = 0.522
+output = 1.044
+cache_read = 0.0435
+discount = 0.7
 input_list = 1.74
 output_list = 3.48
-cache_read_list = 0.145002
+cache_read_list = 0.145
 
 [limit]
 context = 1_048_576
