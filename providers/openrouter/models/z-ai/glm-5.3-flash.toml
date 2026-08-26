@@ -7,7 +7,7 @@ attachment = true
 reasoning = true
 temperature = true
 tool_call = true
-structured_output = false
+structured_output = true
 open_weights = true
 
 [[reasoning_options]]
@@ -24,7 +24,7 @@ output_list = 0.5
 cache_read_list = 0.03
 
 [limit]
-context = 1_048_576
+context = 1_310_720
 output = 131_072
 
 [modalities]
