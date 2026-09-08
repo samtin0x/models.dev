@@ -1,8 +1,8 @@
-name = "Mercury 2.5 Preview"
-description = "Preview model for early access evaluation, prototyping, and compatibility testing"
+name = "Mercury 2.5"
+description = "Reasoning model for deliberate analysis, multi-step problem solving, and tool use"
 family = "mercury"
-release_date = "2026-08-31"
-last_updated = "2026-08-31"
+release_date = "2026-09-08"
+last_updated = "2026-09-08"
 attachment = false
 reasoning = true
 temperature = true
