@@ -10,11 +10,11 @@ values = ["low", "high", "max"]
 [cost]
 input = 0.57948
 output = 1.73844
-cache_read = 0.057948
+cache_read = 0.018438
 discount = 0.561
 input_list = 1.32
 output_list = 3.96
-cache_read_list = 0.132
+cache_read_list = 0.042
 
 [limit]
 context = 1_048_576
