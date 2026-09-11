@@ -12,10 +12,10 @@ open_weights = false
 reasoning_options = []
 
 [cost]
-input = 0.03
-output = 0.12
-cache_read = 0.006
-discount = 0.9
+input = 0.09
+output = 0.36
+cache_read = 0.018
+discount = 0.7
 input_list = 0.3
 output_list = 1.2
 cache_read_list = 0.06
