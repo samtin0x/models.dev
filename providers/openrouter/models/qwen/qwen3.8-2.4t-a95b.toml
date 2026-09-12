@@ -18,6 +18,10 @@ values = ["low", "medium", "xhigh"]
 input = 2
 output = 6
 cache_read = 0.25
+discount = 0.2
+input_list = 2.5
+output_list = 7.5
+cache_read_list = 0.3125
 
 [limit]
 context = 1_048_576
