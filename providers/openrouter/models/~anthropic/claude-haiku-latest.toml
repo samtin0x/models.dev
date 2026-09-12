@@ -1,5 +1,4 @@
-reasoning_options = [{ type = "toggle" }, { type = "budget_tokens", min = 1024, max = 63999 }]
-name = "Anthropic Claude Haiku Latest"
+name = "Claude Haiku Latest"
 description = "Fast Claude model for responsive assistance, classification, and lightweight agents"
 family = "claude-haiku"
 release_date = "2026-04-27"
@@ -10,6 +9,14 @@ temperature = true
 tool_call = true
 structured_output = true
 open_weights = false
+
+[[reasoning_options]]
+type = "toggle"
+
+[[reasoning_options]]
+type = "budget_tokens"
+min = 1_024
+max = 63_999
 
 [cost]
 input = 1
