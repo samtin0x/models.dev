@@ -21,6 +21,10 @@ values = ["low", "high", "max"]
 input = 0.15
 output = 0.6
 cache_read = 0.003
+discount = 0.5
+input_list = 0.3
+output_list = 1.2
+cache_read_list = 0.006
 
 [limit]
 context = 1_048_576
