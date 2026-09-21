@@ -1,8 +1,8 @@
-name = "Grok Latest"
+name = "Grok 4.7"
 description = "Grok model for agentic tool use, reasoning, coding, and live assistance"
 family = "grok"
-release_date = "2026-07-08"
-last_updated = "2026-07-08"
+release_date = "2026-09-21"
+last_updated = "2026-09-21"
 attachment = true
 reasoning = true
 temperature = true
