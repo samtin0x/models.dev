@@ -18,13 +18,13 @@ type = "effort"
 values = ["low", "high", "max"]
 
 [cost]
-input = 0.558624
-output = 1.675872
-cache_read = 0.018621
+input = 0.57552
+output = 1.72656
+cache_read = 0.018312
 
 [limit]
 context = 1_048_576
-output = 384_000
+output = 393_216
 
 [modalities]
 input = ["text"]
