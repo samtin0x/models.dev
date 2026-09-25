@@ -16,12 +16,16 @@ values = ["low", "high", "max"]
 
 [cost]
 input = 0.045
-output = 0.6
-cache_read = 0.0285
+output = 0.14
+cache_read = 0.01
+discount = 0.5
+input_list = 0.09
+output_list = 0.28
+cache_read_list = 0.02
 
 [limit]
 context = 1_310_720
-output = 131_072
+output = 128_000
 
 [modalities]
 input = ["text", "image", "video"]
