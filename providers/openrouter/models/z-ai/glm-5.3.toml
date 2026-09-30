@@ -24,7 +24,7 @@ output_list = 5.5
 cache_read_list = 0.325
 
 [limit]
-context = 1_310_720
+context = 1_048_576
 output = 943_717
 
 [modalities]
