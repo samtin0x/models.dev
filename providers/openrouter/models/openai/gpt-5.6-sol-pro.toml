@@ -7,19 +7,19 @@ type = "effort"
 values = ["none", "low", "medium", "high", "xhigh", "max"]
 
 [cost]
-input = 4
-output = 20
-cache_read = 0.4
-cache_write = 5
+input = 2
+output = 10
+cache_read = 0.2
+cache_write = 2.5
 discount = 0.5
-input_list = 8
-output_list = 40
-cache_read_list = 0.8
-cache_write_list = 10
+input_list = 4
+output_list = 20
+cache_read_list = 0.4
+cache_write_list = 5
 
 [[cost.tiers]]
 tier = { type = "context", size = 272_000 }
-input = 8
-output = 30
-cache_read = 0.8
-cache_write = 10
+input = 4
+output = 15
+cache_read = 0.4
+cache_write = 5
