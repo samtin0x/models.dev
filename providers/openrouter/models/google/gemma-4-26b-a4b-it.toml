@@ -4,9 +4,13 @@ base_model = "google/gemma-4-26b-a4b-it"
 type = "toggle"
 
 [cost]
-input = 0.09
-output = 0.3
-cache_read = 0.05
+input = 0.0765
+output = 0.255
+cache_read = 0.0425
+discount = 0.15
+input_list = 0.09
+output_list = 0.3
+cache_read_list = 0.05
 
 [limit]
 output = 235_929
