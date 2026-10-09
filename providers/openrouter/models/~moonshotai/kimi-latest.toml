@@ -18,7 +18,7 @@ type = "effort"
 values = ["low", "high", "max"]
 
 [cost]
-input = 0.81
+input = 0.59
 output = 13
 cache_read = 0.3
 
