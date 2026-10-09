@@ -3,12 +3,9 @@ attachment = false
 structured_output = true
 
 [cost]
-input = 0.2574
-output = 1.0287
-discount = 0.1
-input_list = 0.286
-output_list = 1.143
+input = 0.32
+output = 0.89
 
 [limit]
 context = 163_840
-output = 16_000
+output = 16_384
