@@ -17,7 +17,6 @@ type = "budget_tokens"
 input = 0.15
 output = 0.47
 cache_read = 0.016
-cache_write = 0.2
 
 [limit]
 context = 1_000_000
