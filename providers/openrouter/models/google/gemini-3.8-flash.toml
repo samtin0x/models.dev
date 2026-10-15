@@ -15,15 +15,15 @@ type = "effort"
 values = ["low", "medium", "high"]
 
 [cost]
-input = 0.75
-output = 3.75
-reasoning = 3.75
-cache_read = 0.075
+input = 0.825
+output = 4.125
+reasoning = 4.125
+cache_read = 0.0825
 cache_write = 0.041667
 discount = 0.5
-input_list = 1.5
-output_list = 7.5
-cache_read_list = 0.15
+input_list = 1.65
+output_list = 8.25
+cache_read_list = 0.165
 cache_write_list = 0.083334
 
 [limit]
