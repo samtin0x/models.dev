@@ -8,13 +8,13 @@ type = "effort"
 values = ["none", "high", "xhigh"]
 
 [cost]
-input = 0.337734
-output = 0.675468
-cache_read = 0.028145
-discount = 0.8059
+input = 0.297192
+output = 0.594384
+cache_read = 0.024766
+discount = 0.8292
 input_list = 1.74
 output_list = 3.48
-cache_read_list = 0.145003
+cache_read_list = 0.145
 
 [limit]
 context = 1_048_576
