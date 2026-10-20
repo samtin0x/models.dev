@@ -15,9 +15,9 @@ type = "effort"
 values = ["none", "low", "high", "max"]
 
 [cost]
-input = 0.03552
+input = 0.02832
 output = 0.12
-cache_read = 0.00071
+cache_read = 0.000566
 
 [limit]
 context = 1_048_576
