@@ -1,0 +1,23 @@
+name = "Flint (free)"
+description = "Free provider route for experiments, demos, and cost-sensitive chat workloads"
+release_date = "2026-10-19"
+last_updated = "2026-10-19"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+reasoning_options = []
+
+[cost]
+input = 0
+output = 0
+
+[limit]
+context = 262_144
+output = 235_929
+
+[modalities]
+input = ["text"]
+output = ["text"]
