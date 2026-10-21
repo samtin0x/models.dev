@@ -9,9 +9,8 @@ values = ["none", "low", "medium"]
 type = "budget_tokens"
 
 [cost]
-input = 0.3
-output = 2.4
-cache_read = 0.15
+input = 0.08
+output = 0.45
 
 [limit]
 output = 235_929
