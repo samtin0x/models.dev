@@ -7,8 +7,8 @@ attachment = true
 reasoning = true
 temperature = true
 tool_call = true
-structured_output = false
-open_weights = false
+structured_output = true
+open_weights = true
 
 [[reasoning_options]]
 type = "effort"
@@ -20,7 +20,7 @@ output = 0.6
 cache_read = 0.015
 
 [limit]
-context = 1_000_000
+context = 1_048_576
 output = 524_288
 
 [modalities]
