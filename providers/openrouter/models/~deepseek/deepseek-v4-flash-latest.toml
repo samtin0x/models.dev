@@ -16,8 +16,8 @@ values = ["none", "low", "high", "max"]
 
 [cost]
 input = 0.0475
-output = 0.1637
-cache_read = 0.027
+output = 0.1568
+cache_read = 0.028
 
 [limit]
 context = 1_048_576
