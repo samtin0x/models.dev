@@ -21,8 +21,8 @@ output_list = 0.9
 cache_read_list = 0.06
 
 [limit]
-context = 262_144
-output = 235_929
+context = 1_000_000
+output = 262_144
 
 [modalities]
 input = ["text"]
