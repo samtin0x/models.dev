@@ -8,7 +8,7 @@ values = ["none", "low", "high", "max"]
 
 [cost]
 input = 0.192
-output = 20
+output = 15
 cache_read = 0.182
 
 [limit]
