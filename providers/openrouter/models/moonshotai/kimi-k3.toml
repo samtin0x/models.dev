@@ -7,9 +7,9 @@ type = "effort"
 values = ["none", "low", "high", "max"]
 
 [cost]
-input = 0.239
-output = 10.8
-cache_read = 0.21
+input = 0.192
+output = 15
+cache_read = 0.182
 
 [limit]
 output = 943_718
