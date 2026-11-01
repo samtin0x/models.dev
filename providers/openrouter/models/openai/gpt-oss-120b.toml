@@ -5,8 +5,8 @@ type = "effort"
 values = ["low", "medium", "high"]
 
 [cost]
-input = 0.021
-output = 0.076
+input = 0.017
+output = 0.062
 
 [limit]
 output = 65_536
