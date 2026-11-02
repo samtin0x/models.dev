@@ -18,12 +18,14 @@ values = ["low", "medium", "high", "xhigh"]
 input = 2
 output = 6
 cache_read = 0.5
+cache_write = 0
 
 [[cost.tiers]]
 tier = { type = "context", size = 200_000 }
 input = 4
 output = 12
 cache_read = 1
+cache_write = 0
 
 [limit]
 context = 500_000
