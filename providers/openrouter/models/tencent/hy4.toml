@@ -1,0 +1,31 @@
+name = "Hy4"
+description = "Tencent Hy reasoning model for coding, instruction following, and agent tasks"
+release_date = "2026-11-04"
+last_updated = "2026-11-04"
+attachment = true
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+
+[[reasoning_options]]
+type = "effort"
+values = ["none", "low", "high"]
+
+[cost]
+input = 0.417
+output = 1.2505
+cache_read = 0.021
+discount = 0.5
+input_list = 0.834
+output_list = 2.501
+cache_read_list = 0.042
+
+[limit]
+context = 1_048_576
+output = 65_536
+
+[modalities]
+input = ["text", "image"]
+output = ["text"]
