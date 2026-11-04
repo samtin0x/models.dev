@@ -4,9 +4,9 @@ base_model = "google/gemma-4-26b-a4b-it"
 type = "toggle"
 
 [cost]
-input = 0.079
-output = 0.238
-cache_read = 0.04
+input = 0.1
+output = 0.299
+cache_read = 0.05
 
 [modalities]
 input = ["image", "text", "video"]
