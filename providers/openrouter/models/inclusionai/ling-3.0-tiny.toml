@@ -1,0 +1,25 @@
+name = "Ling 3.0 Tiny"
+description = "Reasoning model for deliberate analysis, multi-step problem solving, and tool use"
+family = "ling"
+release_date = "2026-08-06"
+last_updated = "2026-08-06"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+reasoning_options = []
+
+[cost]
+input = 0.015
+output = 0.045
+cache_read = 0.003
+
+[limit]
+context = 262_144
+output = 250_000
+
+[modalities]
+input = ["text"]
+output = ["text"]
