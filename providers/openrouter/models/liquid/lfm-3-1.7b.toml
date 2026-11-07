@@ -1,0 +1,25 @@
+name = "LFM3-1.7B"
+description = "Reasoning model for deliberate analysis, multi-step problem solving, and tool use"
+family = "liquid"
+release_date = "2026-11-06"
+last_updated = "2026-11-06"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+reasoning_options = []
+
+[cost]
+input = 0.08
+output = 0.2
+cache_read = 0.02
+
+[limit]
+context = 262_144
+output = 8_192
+
+[modalities]
+input = ["text"]
+output = ["text"]
