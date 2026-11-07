@@ -5,9 +5,9 @@ type = "effort"
 values = ["low", "medium", "high"]
 
 [cost]
-input = 0.01
-output = 0.037
-cache_read = 0.009
+input = 0.018
+output = 0.067
+cache_read = 0.016
 
 [limit]
 output = 65_536
