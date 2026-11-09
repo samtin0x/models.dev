@@ -12,4 +12,5 @@ output_list = 1.2
 cache_read_list = 0.06
 
 [limit]
+context = 196_608
 output = 176_947

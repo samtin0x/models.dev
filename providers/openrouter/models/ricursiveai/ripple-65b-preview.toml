@@ -3,11 +3,12 @@ description = "Preview model for early access evaluation, prototyping, and compa
 release_date = "2026-11-04"
 last_updated = "2026-11-04"
 attachment = false
-reasoning = false
+reasoning = true
 temperature = true
 tool_call = true
-structured_output = false
+structured_output = true
 open_weights = false
+reasoning_options = []
 
 [cost]
 input = 0.2
