@@ -12,9 +12,9 @@ knowledge = "2023-06-30"
 open_weights = false
 
 [cost]
-input = 0.4
-output = 0.75
-cache_read = 0.4
+input = 0.3
+output = 0.5
+cache_read = 0.3
 
 [limit]
 context = 8_000

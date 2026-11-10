@@ -1,0 +1,28 @@
+name = "ERNIE-Light-DT-1.0"
+description = "Reasoning model for deliberate analysis, multi-step problem solving, and tool use"
+family = "ernie"
+release_date = "2026-11-10"
+last_updated = "2026-11-10"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = false
+
+[[reasoning_options]]
+type = "effort"
+values = ["none", "low", "high", "max"]
+
+[cost]
+input = 1.13
+output = 3.94
+cache_read = 0.113
+
+[limit]
+context = 1_024_000
+output = 131_072
+
+[modalities]
+input = ["text"]
+output = ["text"]

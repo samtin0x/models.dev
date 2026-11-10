@@ -1,0 +1,28 @@
+name = "ERNIE-5.5-Flash-Preview"
+description = "Flagship model for demanding analysis, coding, and production agent workflows"
+family = "ernie"
+release_date = "2026-11-10"
+last_updated = "2026-11-10"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+
+[[reasoning_options]]
+type = "effort"
+values = ["high"]
+
+[cost]
+input = 0.28
+output = 1.13
+cache_read = 0.028
+
+[limit]
+context = 1_024_000
+output = 921_600
+
+[modalities]
+input = ["text"]
+output = ["text"]
