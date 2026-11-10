@@ -3,10 +3,10 @@ attachment = false
 structured_output = true
 
 [cost]
-input = 0.59
-output = 0.79
-cache_read = 0.295
+input = 0.71
+output = 0.71
+cache_read = 0.71
 
 [limit]
 context = 131_072
-output = 32_768
+output = 115_200

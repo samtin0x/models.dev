@@ -1,18 +1,17 @@
-name = "Crouton Alpha"
+name = "Inkling 2 Small (free)"
 description = "Multimodal reasoning model for visual analysis, planning, and tool use"
-family = "alpha"
-release_date = "2026-11-03"
-last_updated = "2026-11-03"
+release_date = "2026-11-09"
+last_updated = "2026-11-09"
 attachment = true
 reasoning = true
 temperature = true
 tool_call = true
-structured_output = true
+structured_output = false
 open_weights = false
 
 [[reasoning_options]]
 type = "effort"
-values = ["minimal", "low", "medium", "high", "xhigh", "max"]
+values = ["minimal", "low", "medium", "high", "max"]
 
 [cost]
 input = 0
@@ -20,8 +19,8 @@ output = 0
 
 [limit]
 context = 1_048_576
-output = 943_718
+output = 131_072
 
 [modalities]
-input = ["text", "image", "video", "pdf", "audio"]
+input = ["text", "image"]
 output = ["text"]
