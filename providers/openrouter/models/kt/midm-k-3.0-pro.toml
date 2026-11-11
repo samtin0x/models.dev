@@ -1,0 +1,24 @@
+name = "Mi:dm K 3.0 Pro"
+description = "Flagship model for demanding analysis, coding, and production agent workflows"
+release_date = "2026-11-05"
+last_updated = "2026-11-05"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = false
+structured_output = true
+open_weights = false
+reasoning_options = []
+
+[cost]
+input = 0.2
+output = 0.8
+cache_read = 0.04
+
+[limit]
+context = 261_795
+output = 235_615
+
+[modalities]
+input = ["text"]
+output = ["text"]
