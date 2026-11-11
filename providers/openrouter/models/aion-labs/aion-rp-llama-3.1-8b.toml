@@ -9,7 +9,7 @@ temperature = true
 tool_call = false
 structured_output = false
 knowledge = "2023-12-31"
-open_weights = false
+open_weights = true
 
 [cost]
 input = 0.8

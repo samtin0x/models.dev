@@ -13,5 +13,4 @@ input = 0.075
 output = 0.4
 
 [limit]
-context = 1_048_576
 output = 16_384
