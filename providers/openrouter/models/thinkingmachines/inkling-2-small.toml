@@ -1,0 +1,27 @@
+name = "Inkling 2 Small"
+description = "Multimodal reasoning model for visual analysis, planning, and tool use"
+release_date = "2026-11-09"
+last_updated = "2026-11-09"
+attachment = true
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+
+[[reasoning_options]]
+type = "effort"
+values = ["minimal", "low", "medium", "high", "max"]
+
+[cost]
+input = 0.3
+output = 1
+cache_read = 0.03
+
+[limit]
+context = 1_048_576
+output = 943_718
+
+[modalities]
+input = ["text", "image"]
+output = ["text"]
