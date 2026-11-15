@@ -13,12 +13,12 @@ reasoning_options = []
 
 [cost]
 input = 0.15
-output = 0.47
+output = 0.5
 cache_read = 0.02
 
 [limit]
 context = 1_048_576
-output = 943_718
+output = 235_929
 
 [modalities]
 input = ["text", "image", "video"]
