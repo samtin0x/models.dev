@@ -1,0 +1,24 @@
+name = "Hy4 flash"
+description = "Tencent Hy reasoning model for coding, instruction following, and agent tasks"
+release_date = "2026-11-16"
+last_updated = "2026-11-16"
+attachment = true
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = false
+reasoning_options = []
+
+[cost]
+input = 0.035
+output = 0.1405
+cache_read = 0.0015
+
+[limit]
+context = 1_048_576
+output = 65_536
+
+[modalities]
+input = ["text", "image"]
+output = ["text"]

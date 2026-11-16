@@ -15,10 +15,10 @@ type = "effort"
 values = ["none", "low", "high", "xhigh"]
 
 [cost]
-input = 1.5
-output = 4.5
-cache_read = 0.075
-cache_write = 1.875
+input = 1.425
+output = 4.275
+cache_read = 0.07125
+cache_write = 1.78125
 
 [limit]
 context = 1_000_000
