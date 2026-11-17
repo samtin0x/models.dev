@@ -19,6 +19,11 @@ input = 1.425
 output = 4.275
 cache_read = 0.07125
 cache_write = 1.78125
+discount = 0.05
+input_list = 1.5
+output_list = 4.5
+cache_read_list = 0.075
+cache_write_list = 1.875
 
 [limit]
 context = 1_000_000
