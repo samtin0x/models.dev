@@ -4,9 +4,8 @@ base_model = "alibaba/qwen3.5-9b"
 type = "toggle"
 
 [cost]
-input = 0.142
-output = 0.208
-cache_read = 0.127
+input = 0.17
+output = 0.25
 
 [limit]
-output = 40_960
+output = 235_929
