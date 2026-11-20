@@ -3,14 +3,8 @@ structured_output = false
 reasoning_options = []
 
 [cost]
-input = 0.21
-output = 0.84
-cache_read = 0.042
-discount = 0.3
-input_list = 0.3
-output_list = 1.2
-cache_read_list = 0.06
+input = 0.6
+output = 1.8
 
 [limit]
 context = 196_608
-output = 176_947
