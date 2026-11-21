@@ -6,10 +6,10 @@ reasoning_options = []
 field = "reasoning_details"
 
 [cost]
-input = 0.295
-output = 1.2
-cache_read = 0.06
+input = 0.27
+output = 0.95
+cache_read = 0.03
 
 [limit]
 context = 198_000
-output = 176_947
+output = 32_768
