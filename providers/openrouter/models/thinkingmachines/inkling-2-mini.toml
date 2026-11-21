@@ -1,22 +1,26 @@
-name = "Dots3-Note Preview (free)"
+name = "Inkling 2 Mini"
 description = "Multimodal reasoning model for visual analysis, planning, and tool use"
-release_date = "2026-08-14"
-last_updated = "2026-08-14"
+release_date = "2026-11-21"
+last_updated = "2026-11-21"
 attachment = true
 reasoning = true
 temperature = true
 tool_call = true
 structured_output = true
 open_weights = true
-reasoning_options = []
+
+[[reasoning_options]]
+type = "effort"
+values = ["none", "minimal", "low", "medium", "high", "max"]
 
 [cost]
-input = 0
-output = 0
+input = 0.1
+output = 0.4
+cache_read = 0.02
 
 [limit]
-context = 512_000
-output = 460_800
+context = 1_048_576
+output = 65_536
 
 [modalities]
 input = ["text", "image"]
