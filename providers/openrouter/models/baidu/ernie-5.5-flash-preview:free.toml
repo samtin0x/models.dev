@@ -12,7 +12,7 @@ open_weights = true
 
 [[reasoning_options]]
 type = "effort"
-values = ["high"]
+values = ["none", "low", "medium", "high"]
 
 [cost]
 input = 0
