@@ -1,4 +1,4 @@
-name = "Ling 3.2 Flash (free)"
+name = "Ling 3.2 Flash"
 description = "Multimodal reasoning model for visual analysis, planning, and tool use"
 family = "ling"
 release_date = "2026-11-13"
@@ -12,8 +12,9 @@ open_weights = true
 reasoning_options = []
 
 [cost]
-input = 0
-output = 0
+input = 0.3
+output = 0.9
+cache_read = 0.06
 
 [limit]
 context = 1_048_576
